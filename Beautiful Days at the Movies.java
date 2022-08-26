@@ -43,23 +43,28 @@ public class Solution {
 
     public static void main(String[] args) {
         
-        Scanner in = new Scanner(System.in);
-        int i = in.nextInt();
-        int j = in.nextInt();
-        int k = in.nextInt();
-        int count = 0;
+       Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        int j = sc.nextInt();
+        int k = sc.nextInt();
         
-        for (int a=i;j>a; a++){
-            StringBuilder temp = new StringBuilder();
-            temp.append(a);
-            temp=temp.reverse();
-            String temp1 = temp.toString();
-            int aRev = Integer.parseInt(temp1);
-            if(Math.abs((a-aRev)%k)==0){
+        int n= j-i+1;
+        int count=0;
+           
+        while(i<=j){
+        int number= i;
+        int reverse= 0;
+        
+             while(number!= 0){
+            reverse = (reverse*10)+(number%10);
+            number = number/10;
+             } 
+            int diff= Math.abs(i-reverse);
+           if(diff % k==0||diff==0){
                 count++;
-            }
+                    }
+        i++;
         }
-        
-        System.out.println(count);
+      System.out.println(count); 
     }
 }
