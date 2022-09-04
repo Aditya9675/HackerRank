@@ -82,8 +82,8 @@ public class Solution {
             lastCommon++;
         }
         
-        if(lastCommon == -1) { // If strings are different
-            if(k >= tL + sL) { // If k more then target lenght and remainder is even
+        if(lastCommon == -1) {
+            if(k >= tL + sL) {
                 System.out.println("Yes");
             } else {
                 System.out.println("No");
