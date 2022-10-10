@@ -102,10 +102,7 @@ import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class Solution {
-
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        
         Scanner sc = new Scanner(System.in);
         int start = -1;int count = 0;int end = -1;
         int prev_i = -1;
@@ -118,8 +115,7 @@ public class Solution {
         if(findSwap(arr)==-1){
             findReverse(arr);
         }
-    }
-    
+    }  
    static int findReverse(int [] arr){
       int start =-1;int end = -1;
        for(int i = 0;i<arr.length-1;i++){
